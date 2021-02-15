@@ -20,9 +20,9 @@ pkgver(){
 build() {
 	cd "$pkgname"
 	wget https://ci.dv8tion.net/job/JDA/lastSuccessfulBuild/artifact/build/libs/JDA-4.2.0_228-withDependencies.jar
-	javac -cp *.jar -d ./build *.java
-	cd build
-	jar cvf eventusbottus.jar *
+	#javac -cp *.jar -d ./build *.java
+	#cd build
+	jar cmvf META-INF/MANIFEST.MF eventusbottus.jar *
 }
 
 package() {
