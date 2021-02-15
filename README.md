@@ -1,5 +1,5 @@
 # EventusBootus
 A eventbot for discord using JDA
 
-#Requirements
+# Requirements
 JDA Version 4.20
