@@ -11,7 +11,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import de.pinhreek.events.Event;
+import de.pinphreek.events.Event;
 import de.pinphreek.main.Main;
 
 public class Config implements Serializable{

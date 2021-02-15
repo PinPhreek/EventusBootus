@@ -6,8 +6,8 @@ import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
-import de.pinhreek.events.Event;
 import de.pinphreek.config.Config;
+import de.pinphreek.events.Event;
 import de.pinphreek.main.Main;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Message;
