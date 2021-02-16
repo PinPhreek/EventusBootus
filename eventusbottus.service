@@ -1,0 +1,8 @@
+[Unit]
+Description=A meeting scheduling bot written in Java
+
+[Service]
+ExecStart="java -jar /usr/bin/eventusbottus.jar"
+WorkingDirectory=/usr/bin/
+Restart=always
+

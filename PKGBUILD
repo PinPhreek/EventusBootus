@@ -22,4 +22,5 @@ package() {
 	cd "$pkgname"
 	install -Dm755 ./eventusbottus.jar "$pkgdir/usr/bin/eventusbottus.jar"
 	install -Dm644 ./README.md "$pkgdir/usr/share/doc/$pkgname"
+	install -Dm755 ./eventusbottus.service "$pkgdir/etc/systemd/system/eventusbottus.service"
 }
