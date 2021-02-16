@@ -20,7 +20,6 @@ public class ReactionListener extends ListenerAdapter {
 				for (Event e : Config.events) {
 					if (e.messageId == event.getMessageIdLong() && !isAlreadyRegistered(event.getUserIdLong(), e)) {
 						e.participants.add(event.getUserIdLong());
-						// event.getReaction().removeReaction().queue();
 						return;
 					}
 				}
@@ -29,7 +28,6 @@ public class ReactionListener extends ListenerAdapter {
 				for (Event e : Config.events) {
 					if (e.messageId == event.getMessageIdLong()) {
 						e.participants.remove(event.getUserIdLong());
-						// event.getReaction().removeReaction().queue();
 						return;
 					}
 				}

@@ -76,6 +76,7 @@ public class Config implements Serializable{
 				System.err.println("Can't create token-file! Read-Only-Filesystem/No Permissions?");
 				System.err.println("Here is the stacktrace:");
 				e.printStackTrace();
+				System.exit(-1);
 			}
 		}
 		try {
