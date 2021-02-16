@@ -57,7 +57,6 @@ public class ScheduleListener extends ListenerAdapter {
 		message = event.getMessage();
 		lowContent = message.getContentRaw().toLowerCase();
 		content = message.getContentRaw();
-		System.out.println(message.getTextChannel().getName() + ": " + content);
 		// new time
 		if (lowContent.startsWith("!schedule")) {
 			EmbedBuilder error = new EmbedBuilder();
@@ -106,6 +105,7 @@ public class ScheduleListener extends ListenerAdapter {
 					}
 				}
 			}
+			
 			// date not given
 			if (date < 0 && time >= 0) {
 				try {
@@ -121,6 +121,7 @@ public class ScheduleListener extends ListenerAdapter {
 					return;
 				}
 			}
+			
 			// everything given
 			else if (date >= 0 && time >= 0) {
 				try {
@@ -165,6 +166,7 @@ public class ScheduleListener extends ListenerAdapter {
 				event.getChannel().sendMessage(error.build()).queue();
 				return;
 			}
+			
 			if (dt != null) {
 				if (ZonedDateTime.now().isAfter(dt)) {
 					EmbedBuilder timov = new EmbedBuilder();
@@ -213,7 +215,6 @@ public class ScheduleListener extends ListenerAdapter {
 				 **********************/
 				Event e = new Event(dt.toInstant().toEpochMilli(), back, event.getChannel().getIdLong());
 				e.participants.add(event.getAuthor().getIdLong());
-				System.out.println(e.calculateRemainingMillis() / 60000 + " Minutes remaining");
 
 				// adding
 				Config.events.add(e);

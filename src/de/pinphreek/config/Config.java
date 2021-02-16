@@ -16,7 +16,7 @@ import de.pinphreek.main.Main;
 
 public class Config implements Serializable{
 
-	private static final long serialVersionUID = 6022063681070878794L;
+	private static final long serialVersionUID = 4480373974209462255L;
 	public static String TOKEN = "";
 	public static ArrayList<Event> events = new ArrayList<>();
 	

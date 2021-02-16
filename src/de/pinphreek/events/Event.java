@@ -41,6 +41,7 @@ public class Event extends TimerTask implements Serializable{
 		}
 		catch(Exception e){
 			//Main.jda.getTextChannelById(this.channelId).sendMessage("Sentence the developer of this bot to go to hell.").queue();
+			e.printStackTrace();
 		}
 		
 		//aufräumen
