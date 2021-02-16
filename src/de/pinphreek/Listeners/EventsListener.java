@@ -43,8 +43,9 @@ public class EventsListener extends ListenerAdapter{
 					dateCompare = Instant.ofEpochMilli(events.get(i).scheduledAt).atZone(ZoneId.of("Europe/Berlin")).toLocalDate();
 					timeScheduled = Instant.ofEpochMilli(events.get(i).scheduledAt).atZone(ZoneId.of("Europe/Berlin")).toLocalTime();
 					if(dateCompare.isAfter(dateNow)){
-						s += events.get(i).title + " " + MarkdownUtil.bold(dateCompare.getDayOfMonth() + "." + dateCompare.getMonthValue() + "." + dateCompare.getYear() +
-								" " + timeScheduled.toString()) + "\n";
+						s += events.get(i).title + " "
+								+ MarkdownUtil.bold(dateCompare.getDayOfMonth() + "." + dateCompare.getMonthValue()
+								+ "." + dateCompare.getYear() + " " + timeScheduled.toString()) + "\n";
 					}
 					else {
 						s += events.get(i).title + " " + MarkdownUtil.bold(timeScheduled.toString() + "\n");

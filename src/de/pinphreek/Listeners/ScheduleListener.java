@@ -52,12 +52,14 @@ public class ScheduleListener extends ListenerAdapter {
 		if (!event.getMessage().getContentRaw().startsWith("!"))
 			return;
 
-		// getContentDisplay() is a lazy getter which modifies the content for e.g.
-		// console view (strip discord formatting)
+		// getContentDisplay() is a lazy getter which modifies the content for e.g. console view (strip discord formatting)
 		message = event.getMessage();
 		lowContent = message.getContentRaw().toLowerCase();
 		content = message.getContentRaw();
-		// new time
+		
+		/************************
+		 * Schedule new meeting *
+		 ************************/
 		if (lowContent.startsWith("!schedule")) {
 			EmbedBuilder error = new EmbedBuilder();
 			error.setColor(0xC43C1A);
@@ -179,7 +181,8 @@ public class ScheduleListener extends ListenerAdapter {
 
 					event.getChannel().sendMessage(timov.build()).queue();
 					return;
-				} else if (ZonedDateTime.now().isEqual(dt)) {
+				} 
+				else if (ZonedDateTime.now().isEqual(dt)) {
 					EmbedBuilder timov = new EmbedBuilder();
 					timov.setColor(0xC43C1A);
 					timov.setTitle("Take a later time! It's already " + split[time] + ".");
@@ -205,6 +208,7 @@ public class ScheduleListener extends ListenerAdapter {
 				else {
 					event.getChannel().sendMessage(back).queue();
 				}
+				
 				back = "";
 				for (int i = 1; i < time; i++) {
 					back = back + split[i] + " ";
@@ -224,12 +228,17 @@ public class ScheduleListener extends ListenerAdapter {
 			}
 			event.getChannel().sendMessage(error.build()).queue();
 		}
-
+		
+		/********************
+		 * Java Master-Race *
+		 ********************/
 		else if (content.equalsIgnoreCase("!python-vs-java")) {
 			event.getChannel().sendMessage("Java " + event.getAuthor().getAsMention()).queue();
 		}
 
-		// display help and filter other commands in different files
+		/*************************************************************
+		 * display help and filter other commands in different files *
+		 *************************************************************/
 		else if (!content.equalsIgnoreCase("!events")) {
 			EmbedBuilder builder = new EmbedBuilder();
 			builder.setTitle("Help");
