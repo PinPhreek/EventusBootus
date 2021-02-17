@@ -2,7 +2,10 @@
 Description=A meeting scheduling bot written in Java
 
 [Service]
-ExecStart="java -jar /usr/bin/eventusbottus.jar"
+ExecStart=/bin/java -jar /usr/bin/eventusbottus.jar
 WorkingDirectory=/usr/share/eventusbottus
-Restart=always
+Restart=on-failure
+RestartSec=10
 
+[Install]
+WantedBy=multi-user.target
