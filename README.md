@@ -10,8 +10,8 @@ Java 8 JRE
 `!help` - shows a help-text <br>
 
 # Install
-`git clone https://github.com/PinPhreek/EventusBootus.git
-makepkg -si`
+`git clone https://github.com/PinPhreek/EventusBootus.git` <br>
+`makepkg -si`
 
  <!--## Token
  * `$ sudo systemctl start eventusbottus`
