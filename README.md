@@ -21,4 +21,4 @@ Java 8 JRE/JDK
 # Micelanious
 This bot was created in a programming challenge lasting from 1st Febuary 2021 to 17th Febuary 2021.
 The cause of the challenge was to see, which programming language is more beatiful to look at: Java or Python.
-This is the Java-side, you can find [here](https://github.com/svenmauch/)
+This is the Java-side, you can find the python-side [here](https://github.com/svenmauch/timelord)
